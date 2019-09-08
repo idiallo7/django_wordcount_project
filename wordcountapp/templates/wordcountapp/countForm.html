@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CountForm</title>
+</head>
+
+<h3>{{formWelcome}}</h3>
+<form method='POST' action="{% url 'countForm' %}">{% csrf_token %}
+<textarea rows="4" cols="50" name="comment">
+Enter text here...</textarea>
+<br/>
+  <input type="submit">
+</form>
+<br/>
+Data - {{cmt}}
+<br/>
+count - {{nbr}}
+
+<br/>
+word Freq - {{freq}}
+
+</body>
+</html>
